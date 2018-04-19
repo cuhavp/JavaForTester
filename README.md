@@ -93,4 +93,38 @@ với x là ẩn số chưa biết và a, b, c là các số đã biết sao cho
 
 ```
 
-![Nghiệm của phương trình](https://upload.wikimedia.org/wikipedia/commons/c/c4/Quadratic_formula.svg)
+![Nghiệm của phương ](https://upload.wikimedia.org/wikipedia/commons/c/c4/Quadratic_formula.svg)
+
+17. Cho môt mảng số nguyên int[] A, Viết một chương trình xuất ra mảng B = A + 1
+
+ví dụ:
+ A = {1,3,2,4}  ==> B = {1,3,2,5}
+ A = {9,9,9}    ==> B = {1,0,0,0}
+
+18. Cho 2 số nguyên int a, b, viết chương trình đảo giá trị 2 số này mà ko được phép dùng biến thứ 3.
+
+19. Cho một mảng số nguyên, viết 1 chương trình xuất ra mảng con có tổng là lớn nhất.
+20. Loại bỏ khoảng trắng thừa trong 1 câu. Khoảng trắng thừ là khoảng trắng nằm ở đầu và cuối câu hoặc khoảng trắng nằm ngay sau môt khoảng trắng khác.
+21. Cho một mảng N phần tử, in ra cực trị địa phướng (local max, local )min của mảng
+  + Local max là phần tử a[i] sao cho a[i] > a[i+1] && a[i] > a[i-1]
+  + Local min là phần tử a[i] sao cho a[i] < a[i+1] && a[i] > a[i-1]
+22. Remove Duplicate. Cho một mảng có N phần tử. Xoá các phần tử bị trùng và giữ nguyên thứ tự.
+23. Cho một dãy số tự nhiên không theo thứ tự. In ra danh sách những số Fibonacci nằm giữa những cặp số tự nhiên đó nhưng không trùng. Dãy Fibonacci in ra theo thứ tự tăng dần và không trùng nhau.
+24. Cho một chuỗi kí tự gồm số và kí tự a-z (lowercase). Xoay chuỗi kí tự X lần trên bảng mã [0-9a-z]. Lưu ý bảng mã [0-9a-z] là [0, 1, 2, 4, 5, 6, 7, 8, 9, a, b, c, …., x, y, z]
+25. Cho một chuỗi chỉ gồm các kí tự chữ số. Thực hiện liên tục việc cộng các chữ số lại cho đến khi tổng chỉ còn một chữ số. 
+```
+Ví dụ:
+Input                         Output
+3                            
+123                             6
+998                             6
+999999999955                    1
+Giải thích:
+1 + 2 + 3 = 6
+9 + 9 + 8 = 26	 =>  2 + 6 = 8
+9 + 9 + 9 + 9 + 9 + 9 + 9 + 9 + 9 + 9 + 5 + 5 = 100 => 1 + 0 + 0 = 1
+```
+26. Cho một số tự nhiên N, sắp xếp lại các chữ số của nó sao cho được một số nhỏ nhất.
+
+
+
