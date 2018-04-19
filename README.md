@@ -3,13 +3,156 @@ This repo show on questions/ assignment during training java session for Tester
 
 
 1. Kiểm tra một số nhập vào có phải là số nguyên tố hay không?
+
+```java
+public static boolean iskSNT(int x){
+    if(x<2)
+        return false;
+    int sqrt = (int) Math.sqrt(x);
+    for (int i = 2; i <= sqrt; i++) {
+        if (x % i == 0) {
+        return false;
+    }
+    }
+    return true;
+}
+```
 2. Sắp xêp mảng tăng dần
+```java
+public static void EscSort(Integer[] a) {
+    if (a != null) {
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a.length - 1; j++) {
+                if (a[j] >= a[j + 1]) {
+                    int temp = 0;
+                    temp = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = temp;
+                }
+            }
+        }
+        System.out.print("Array after EscSort: ");
+        for (int i = 0; i < a.length; i++) {
+            System.out.print(a[i] + " ");
+        } 
+    } else {
+        System.out.println("Null array.");
+    }
+}
+```
 3. Sắp xếp giảm dần
+```java
+public static void DescSort(Integer[] a) {
+    if (a != null) {
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a.length - 1; j++) {
+                if (a[j] <= a[j + 1]) {
+                    int temp = 0;
+                    temp = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = temp;
+                }
+            }
+        }
+        System.out.print("Array after DescSort: ");
+        for (int i = 0; i < a.length; i++) {
+            System.out.print(a[i] + " ");
+      }
+    } else {
+    System.out.println("Null array.");
+    }
+}
+```
 4. Sử dụng For Loop để đảo một số nguyên cho trước
+```java
+public static void daosoFor(int n){
+    List <Integer> list = new ArrayList<>();
+    int flag = 0;
+    if (n<0){
+        n=-n;
+        flag =1;
+    }
+    for (;n!=0;n=n/10 ){
+        list.add(n%10);
+        if (list.get(0)==0){
+            list.remove(0);
+        }
+    }
+    for (int j:list){
+        if (flag ==1){
+            System.out.print("-");
+            flag ++;
+        }
+        System.out.print(j);
+    }
+    System.out.println(" ");
+}
+```
 5. Sử dụng While Loop để đảo 1 số nguyên cho trước
+```java
+public static void daoSoWhile(int n){
+    List <Integer> list = new ArrayList<>();
+    int flag = 0;
+    if (n<0){
+        n=-n;
+        flag =1;
+    }
+    while (n!=0){
+        list.add(n%10);
+        if (list.get(0)==0){
+            list.remove(0);    
+        }
+        n=n/10;
+    }
+    for (int j:list){
+        if (flag ==1){
+            System.out.print("-");
+            flag ++;
+        }
+        System.out.print(j);
+    }
+    System.out.println(" ");
+}
+```
 6. Tìm phần tử lớn nhất trong mảng
+```java
+public static int findMax(Integer [] a){
+    int max = a[0];
+    for (int i=0; i<=a.length-1;i++){
+        if(a[i]>max){
+            max = a[i];
+        }
+    }
+    return max;
+}
+```
 7. Tìm phần tử nhỏ nhất trong mảng
+```java
+public static int findMin(Integer [] a){
+    int min = a[0];
+    for (int i=0; i<=a.length-1;i++){
+      if(a[i]<min){
+        min = a[i];
+      }
+    }
+    return min;
+  }
+```
 8. Viết một chương trình kiểm tra 1 chữ cái nhập vào có phải là nguyên âm, phụ âm hay không?
+```java
+public static void checkChuCai(char c){
+    String s = "" + c;
+    if(s.matches("[a-zA-Z]")){
+        if (s.matches("[ueoaiUEOAI]")){
+            System.out.println(String.format("%c la nguyen am",c));
+        }
+        else {
+            System.out.println(String.format("%c la phu am",c));
+        }
+    }
+    else System.out.println(String.format("%c khong là nguyen am, phu am",c));
+}
+```
 9. Viết 1 hàm cộng 2 số ?, hàm này phải trả về 1 kiểu dữ liệu khác void.
 10. In ra màn hình số ngày trông một tháng nếu người dùng nhập vào một chuỗi gồm tháng và năm theo format: "MM/yyyy"
 11. Nhập vào một số dương N, In ra màn hình N+ 1 dòng với môi dòng bắt đầu từ 0.
@@ -20,7 +163,35 @@ This repo show on questions/ assignment during training java session for Tester
     0 1 2 3
     0 1 2 3 4 
     0 1 2 3 4 5
+```java
+public static void Matrix(int n) {
+    for(int i = 0; i <= n; i++){
+        for(int j =0; j <= i; j ++){
+            System.out.print(" " + j);
+        }
+        System.out.println(" ");
+    }
+}
+```
 12. Viết Một Hàm Kiểm tra chuổi nhập vào có đối xứng hay không (palindrome)
+```java
+public static boolean isPalidrome(String input) {
+    int flag = 1;
+    for (int i = 0; i <= input.length() / 2 - 1; i++) {
+        if (input.charAt(i) == input.charAt(input.length() - 1 - i)) {
+          flag = 1;
+        } else
+          flag = 0;
+    }
+    if (flag == 1) {
+        System.out.println(input + " is Palidrome");
+        return true;
+    } else{
+         System.out.println(input + " isn't Palidrome");
+         return false;
+       }
+}
+```
 13. Viết 1 hàm kiểm tra có phải năm nhuận hay không
 14. Làm việc với Class
 ```text
@@ -125,6 +296,3 @@ Giải thích:
 9 + 9 + 9 + 9 + 9 + 9 + 9 + 9 + 9 + 9 + 5 + 5 = 100 => 1 + 0 + 0 = 1
 ```
 26. Cho một số tự nhiên N, sắp xếp lại các chữ số của nó sao cho được một số nhỏ nhất.
-
-
-
