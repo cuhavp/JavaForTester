@@ -296,3 +296,139 @@ Giải thích:
 9 + 9 + 9 + 9 + 9 + 9 + 9 + 9 + 9 + 9 + 5 + 5 = 100 => 1 + 0 + 0 = 1
 ```
 26. Cho một số tự nhiên N, sắp xếp lại các chữ số của nó sao cho được một số nhỏ nhất.
+```text
+Cho một số nguyên N (-9999<=N<=9999) và hợp lệ (không có số 0 ở đầu). In ra cách đọc trong tiếng Việt, không dấu, của số đó. 
+Quy ước cách đọc:
+
+Bộ chữ cái được dùng là: "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", chín", "mười", "mươi", "lăm", "trăm", "nghìn", "lẻ", "âm", "không".
+Với số hàng đơn vị:
+0 sẽ không đọc
+1 sẽ đọc là “một” nếu hàng chục là 0 hoặc 1, ngược lại thì đọc là “mốt”
+5 sẽ đọc là “năm” nếu hàng chục là 0, ngược lại thì đọc là “lăm"
+Các số còn lại đọc tương ứng như số lẻ bình thường (2 đọc là “hai”, 3 đọc là “ba", …)
+Với số hàng chục:
+0 sẽ đọc là “lẻ" nếu hàng đơn vị có giá trị khác 0. Ví dụ 102 đọc là “một trăm lẻ hai”. Ngược lại không cần đọc số 0.
+1 đọc là “mười”
+Các số còn lại đọc tương ứng như số lẻ bình thường kết hợp với chữ “mươi" thể hiện đây là vị trí hàng chục (2x đọc là “hai mươi x”, 3x đọc là “ba mươi x”, …)
+Với số hàng trăm:
+0 sẽ đọc là “không trăm" nếu hàng chục hoặc hàng đơn vị có giá trị khác 0. Ví dụ 5012 đọc là “năm nghìn không trăm mười hai". Ngược lại không cần đọc số 0.
+Các số còn lại đọc tương ứng như số lẻ bình thường kết hợp với chữ “trăm" thể hiện đây là vị trí hàng trăm (2xx đọc là “hai trăm xx”, 3xx đọc là “ba trăm xx", …)
+Với số hàng nghìn:
+Không cần xét số 0 ở đầu do yêu cầu của đề đơn giản hoá bài toán.
+Các số còn lại đọc tương ứng như số lẻ bình thường kết hợp với chữ “nghìn" thể hiện đây là vị trí hàng nghìn (2xxx đọc là “hai nghìn xxx, 3xxx đọc là “ba nghìn xxx”, …)
+
+Input:
+	Dòng đầu tiên gồm một số T, số test của bài.
+	T dòng tiếp theo, mỗi dòng là một test case bao gồm số N. giá trị tuyệt đối của N < 10000
+Output:
+	Gồm T dòng, mỗi dòng in ra một chuỗi cách đọc số, viết thường, không dấu. 
+Ví dụ:
+Input
+
+3
+15
+101
+2002
+-1
+Output
+muoi lam
+mot tram le mot
+hai nghin khong tram le hai
+am mot
+```
+
+```java
+public static void main(String[] args) {
+        int a = 1115;
+        System.out.println(readMe(-9999));
+        System.out.println(readMe(9));
+        System.out.println(readMe(106));
+        System.out.println(readMe(1100));
+
+    }
+
+    public static String vietHoa(int a) {
+        switch (a) {
+            case 0:
+                return "khong";
+            case 1:
+                return "mot";
+            case 2:
+                return "hai";
+            case 3:
+                return "ba";
+            case 4:
+                return "bon";
+            case 5:
+                return "nam";
+            case 6:
+                return "sau";
+            case 7:
+                return "bay";
+            case 8:
+                return "tam";
+            case 9:
+                return "chin";
+            case 1000:
+                return "ngan";
+            case 100:
+                return "tram";
+            case 10:
+                return "muoi";
+
+        }
+        return "";
+    }
+
+    public static String readMe(int a) {
+        int tram;
+        int chuc;
+        int donvi;
+        String outPut = "";
+        if (a < 0) {
+            outPut = outPut + "am ";
+            a = a * -1;
+        }
+        if (a <= 10) {
+            outPut = outPut+" "+vietHoa(a);
+        } else {
+            //Ngan
+            if (a / 1000 > 0) {
+                tram = a % 1000;
+                outPut = outPut + vietHoa(a / 1000) + " ";
+                outPut = outPut + vietHoa(1000) + " ";
+            }
+//tram
+
+            if ((a % 1000) / 100 > 0) {
+                outPut = outPut + vietHoa((a % 1000) / 100) + " ";
+                outPut = outPut + vietHoa(100) + " ";
+            }
+
+
+//chuc
+            if ((a % 100) / 10 > 0) {
+                if ((a % 100) / 10 > 1) {
+                    outPut = outPut + vietHoa((a % 100) / 10) + " ";
+                }
+
+                outPut = outPut + vietHoa(10) + " ";
+            }
+            //don vi
+            if (a % 10 > 0) {
+                chuc = (a % 100) / 10;
+                donvi = a % 10;
+                if (chuc == 0 && donvi > 0) {
+                    outPut = outPut + " le " + vietHoa((a % 10)) + " ";
+
+                } else if (chuc > 0 && donvi == 5) {
+                    outPut = outPut + " lam";
+                } else {
+                    outPut = outPut + vietHoa((a % 10)) + " ";
+                }
+            }
+        }
+        return outPut;
+
+    }
+```
