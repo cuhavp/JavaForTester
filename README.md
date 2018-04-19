@@ -296,7 +296,8 @@ Giải thích:
 9 + 9 + 9 + 9 + 9 + 9 + 9 + 9 + 9 + 9 + 5 + 5 = 100 => 1 + 0 + 0 = 1
 ```
 26. Cho một số tự nhiên N, sắp xếp lại các chữ số của nó sao cho được một số nhỏ nhất.
-```text
+
+27. ```text
 Cho một số nguyên N (-9999<=N<=9999) và hợp lệ (không có số 0 ở đầu). In ra cách đọc trong tiếng Việt, không dấu, của số đó. 
 Quy ước cách đọc:
 
