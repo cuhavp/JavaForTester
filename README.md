@@ -444,7 +444,8 @@ Dòng thứ hai là một dãy báo thức dạng HH:MM, không trùng nhau.
 + Output:
 	Gồm T dòng, mỗi dòng in thời điểm thức dậy dạng HH:MM. Nếu không thể thức dậy, in "cannot wake!"
 
-Ví dụ
++ Ví dụ
+
 | Input                    | Output        |
 | ------------------------ |:-------------:|
 | 1 10 4                   |               |
