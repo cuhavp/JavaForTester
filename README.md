@@ -235,36 +235,36 @@ AB = Math.Sqrt( (Xb-Xa)* (Xb-Xa) + (Yb-Ya)* (Yb-Ya) )
 5. Cho 3 điểm A,B,C tìm độ dài lớn nhất của 3 cạnh AB, AC, BC. Xây dựng hàm tính chu vi tam giác được tạo thành từ 3 điểm trên. Chu vi tam giác bằng tổng 3 cạnh cộng lại.
 ```
 15. Làm việc với class
-```text
-Xây dựng class PhanSo có các thuộc tính như sau:
-+ Tu : Số nguyên
-+ Mau : Số nguyên
 
-1. Khai báo các thuộc tính.
+    Xây dựng class PhanSo có các thuộc tính như sau:
+    + Tu : Số nguyên
+    + Mau : Số nguyên
 
-2. Khai báo hàm tạo không tham số và hàm tạo có đầy đủ tham số cho lớp PhanSo.
+    1. Khai báo các thuộc tính.
+    
+    2. Khai báo hàm tạo không tham số và hàm tạo có đầy đủ tham số cho lớp PhanSo.
+    
+    3. Khai báo hàm nhập và xuất cho lớp PhanSo. Nếu mẫu số là 0 cho phép người sử dụng nhập lại mẫu số.
+    
+    4. Xây dựng hàm tìm phân số tổng của 2 phân số. Xuất ra phân số kết quả không cần rút gọn phân số.
+    
+    5. Xây dựng hàm so sánh 2 phân số. Xuất ra phân số lớn hơn. Hướng dẫn : Chuyển phân số thành số thập phân bằng cách lấy tử chia mẫu. Nhớ ép kiểu qua kiểu số thực khi chia tử cho mẫu.
+    
+    6. Tìm phân số lớn nhất giữa 3 phân số. Xuất ra phân số kết quả.
 
-3. Khai báo hàm nhập và xuất cho lớp PhanSo. Nếu mẫu số là 0 cho phép người sử dụng nhập lại mẫu số.
 
-4. Xây dựng hàm tìm phân số tổng của 2 phân số. Xuất ra phân số kết quả không cần rút gọn phân số.
-
-5. Xây dựng hàm so sánh 2 phân số. Xuất ra phân số lớn hơn. Hướng dẫn : Chuyển phân số thành số thập phân bằng cách lấy tử chia mẫu. Nhớ ép kiểu qua kiểu số thực khi chia tử cho mẫu.
-
-6. Tìm phân số lớn nhất giữa 3 phân số. Xuất ra phân số kết quả.
-```
 16. Viết chương trinhg giải phương trình bậc 2, chương trình trả về phương trình có 1 nghiêmj, có 2 nghiệm, vô nghiệm và vô số nghiệm.
 Yêu cầu viết test case để kiểm tra chương trình chạy đúng hay không.
 Mô tả giải thuật của bạn.
-```text
+
 
 Công thức nghiệm tổng quát của phương trình bậc hai
 Trong đại số sơ cấp, phương trình bậc hai là phương trình có dạng:
 
-{\displaystyle ax^{2}+bx+c=0} {\displaystyle ax^{2}+bx+c=0}
+               aX^2 + bX + c = 0
+
 với x là ẩn số chưa biết và a, b, c là các số đã biết sao cho a khác 0. Các số a, b, và c là những hệ số của phương trình và có thể phân biệt bằng cách gọi tương ứng hệ số bậc hai, hệ số bậc một, và hằng số hay số hạng tự do.[1]
 
-
-```
 
 ![Nghiệm của phương ](https://upload.wikimedia.org/wikipedia/commons/c/c4/Quadratic_formula.svg)
 
