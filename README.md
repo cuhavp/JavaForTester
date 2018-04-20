@@ -3,197 +3,67 @@ This repo show on questions/ assignment during training java session for Tester
 
 
 1. Kiểm tra một số nhập vào có phải là số nguyên tố hay không?
+Phân tích: Số nguyên tố là số chỉ có 2 ước sô là 1 với chinh nó.
 
-```java
-public static boolean iskSNT(int x){
-    if(x<2)
-        return false;
-    int sqrt = (int) Math.sqrt(x);
-    for (int i = 2; i <= sqrt; i++) {
-        if (x % i == 0) {
-        return false;
-    }
-    }
-    return true;
-}
-```
+   ![](icon.png) [Xem đáp án tại đây](Q1.md)
+
 2. Sắp xêp mảng tăng dần
-```java
-public static void EscSort(Integer[] a) {
-    if (a != null) {
-        for (int i = 0; i < a.length; i++) {
-            for (int j = 0; j < a.length - 1; j++) {
-                if (a[j] >= a[j + 1]) {
-                    int temp = 0;
-                    temp = a[j];
-                    a[j] = a[j + 1];
-                    a[j + 1] = temp;
-                }
-            }
-        }
-        System.out.print("Array after EscSort: ");
-        for (int i = 0; i < a.length; i++) {
-            System.out.print(a[i] + " ");
-        } 
-    } else {
-        System.out.println("Null array.");
-    }
-}
-```
+
+Phân tích: Trong Java 8 có hàm *sort()* có thể làm việc này. Bài tập này đưa ra nhằm mục đích tập khả năng sử dụng các hàm cơ bản để giải quyết bài toàn mà ko cần sử dụng các hàm có sẵn.
+
+
+   ![](icon.png) [Xem đáp án tại đây](Q2.md)
+
+
 3. Sắp xếp giảm dần
-```java
-public static void DescSort(Integer[] a) {
-    if (a != null) {
-        for (int i = 0; i < a.length; i++) {
-            for (int j = 0; j < a.length - 1; j++) {
-                if (a[j] <= a[j + 1]) {
-                    int temp = 0;
-                    temp = a[j];
-                    a[j] = a[j + 1];
-                    a[j + 1] = temp;
-                }
-            }
-        }
-        System.out.print("Array after DescSort: ");
-        for (int i = 0; i < a.length; i++) {
-            System.out.print(a[i] + " ");
-      }
-    } else {
-    System.out.println("Null array.");
-    }
-}
-```
+
+   ![](icon.png)  [Xem đáp an tại đây](Q3.md)
+
 4. Sử dụng For Loop để đảo một số nguyên cho trước
-```java
-public static void daosoFor(int n){
-    List <Integer> list = new ArrayList<>();
-    int flag = 0;
-    if (n<0){
-        n=-n;
-        flag =1;
-    }
-    for (;n!=0;n=n/10 ){
-        list.add(n%10);
-        if (list.get(0)==0){
-            list.remove(0);
-        }
-    }
-    for (int j:list){
-        if (flag ==1){
-            System.out.print("-");
-            flag ++;
-        }
-        System.out.print(j);
-    }
-    System.out.println(" ");
-}
-```
+   
+   ![](icon.png)  [Xem đáp án tại dây](Q4.md)
+
 5. Sử dụng While Loop để đảo 1 số nguyên cho trước
-```java
-public static void daoSoWhile(int n){
-    List <Integer> list = new ArrayList<>();
-    int flag = 0;
-    if (n<0){
-        n=-n;
-        flag =1;
-    }
-    while (n!=0){
-        list.add(n%10);
-        if (list.get(0)==0){
-            list.remove(0);    
-        }
-        n=n/10;
-    }
-    for (int j:list){
-        if (flag ==1){
-            System.out.print("-");
-            flag ++;
-        }
-        System.out.print(j);
-    }
-    System.out.println(" ");
-}
-```
+   
+   ![](icon.png)  [Xem đáp án tại đây](Q5.md)
+
+
 6. Tìm phần tử lớn nhất trong mảng
-```java
-public static int findMax(Integer [] a){
-    int max = a[0];
-    for (int i=0; i<=a.length-1;i++){
-        if(a[i]>max){
-            max = a[i];
-        }
-    }
-    return max;
-}
-```
+   
+   ![](icon.png)  [Xem đáp án tại đây](Q6.md)
+
+
 7. Tìm phần tử nhỏ nhất trong mảng
-```java
-public static int findMin(Integer [] a){
-    int min = a[0];
-    for (int i=0; i<=a.length-1;i++){
-      if(a[i]<min){
-        min = a[i];
-      }
-    }
-    return min;
-  }
-```
+
+   ![](icon.png)  [Xem đáp án tại đây](Q7.md)
+
+
 8. Viết một chương trình kiểm tra 1 chữ cái nhập vào có phải là nguyên âm, phụ âm hay không?
-```java
-public static void checkChuCai(char c){
-    String s = "" + c;
-    if(s.matches("[a-zA-Z]")){
-        if (s.matches("[ueoaiUEOAI]")){
-            System.out.println(String.format("%c la nguyen am",c));
-        }
-        else {
-            System.out.println(String.format("%c la phu am",c));
-        }
-    }
-    else System.out.println(String.format("%c khong là nguyen am, phu am",c));
-}
-```
+ 
+   ![](icon.png)  [Xem đáp án tại đây](Q8.md)
+
+
 9. Viết 1 hàm cộng 2 số ?, hàm này phải trả về 1 kiểu dữ liệu khác void.
 Phân tích: Người dùng có thể nhập vào là số, chuổi, hoặc vừa số vừa chuỗi?
 
 10. In ra màn hình số ngày trông một tháng nếu người dùng nhập vào một chuỗi gồm tháng và năm theo format: "MM/yyyy"
 11. Nhập vào một số dương N, In ra màn hình N+ 1 dòng với môi dòng bắt đầu từ 0.
     ví dụ, N= 5,  in ra màn hình sẽ là:
-    ```0
+    ```
+    0
     0 1
     0 1 2
     0 1 2 3
     0 1 2 3 4 
     0 1 2 3 4 5
-```java
-public static void Matrix(int n) {
-    for(int i = 0; i <= n; i++){
-        for(int j =0; j <= i; j ++){
-            System.out.print(" " + j);
-        }
-        System.out.println(" ");
-    }
-}
-```
+
+   ![](icon.png)  [Xem đáp án tại đây](Q11.md)
+
 12. Viết Một Hàm Kiểm tra chuổi nhập vào có đối xứng hay không (palindrome)
-```java
-public static boolean isPalidrome(String input) {
-    int flag = 1;
-    for (int i = 0; i <= input.length() / 2 - 1; i++) {
-        if (input.charAt(i) == input.charAt(input.length() - 1 - i)) {
-          flag = 1;
-        } else
-          flag = 0;
-    }
-    if (flag == 1) {
-        System.out.println(input + " is Palidrome");
-        return true;
-    } else{
-         System.out.println(input + " isn't Palidrome");
-         return false;
-       }
-}
-```
+
+   ![](icon.png)  [Xem đáp án tại đây](Q12.md)
+
+
 13. Viết 1 hàm kiểm tra có phải năm nhuận hay không
 Phân tích: Năm nhuận là năm chia hết cho 4 và ko chia hết cho 100.
 14. Làm việc với Class
@@ -343,101 +213,12 @@ Quy ước cách đọc:
 | -1            |   am mot                         |
 
 
-```java
-public static void main(String[] args) {
-        int a = 1115;
-        System.out.println(readMe(-9999));
-        System.out.println(readMe(9));
-        System.out.println(readMe(106));
-        System.out.println(readMe(1100));
-
-    }
-
-    public static String vietHoa(int a) {
-        switch (a) {
-            case 0:
-                return "khong";
-            case 1:
-                return "mot";
-            case 2:
-                return "hai";
-            case 3:
-                return "ba";
-            case 4:
-                return "bon";
-            case 5:
-                return "nam";
-            case 6:
-                return "sau";
-            case 7:
-                return "bay";
-            case 8:
-                return "tam";
-            case 9:
-                return "chin";
-            case 1000:
-                return "ngan";
-            case 100:
-                return "tram";
-            case 10:
-                return "muoi";
-
-        }
-        return "";
-    }
-
-    public static String readMe(int a) {
-        int tram;
-        int chuc;
-        int donvi;
-        String outPut = "";
-        if (a < 0) {
-            outPut = outPut + "am ";
-            a = a * -1;
-        }
-        if (a <= 10) {
-            outPut = outPut+" "+vietHoa(a);
-        } else {
-            //Ngan
-            if (a / 1000 > 0) {
-                tram = a % 1000;
-                outPut = outPut + vietHoa(a / 1000) + " ";
-                outPut = outPut + vietHoa(1000) + " ";
-            }
-//tram
-
-            if ((a % 1000) / 100 > 0) {
-                outPut = outPut + vietHoa((a % 1000) / 100) + " ";
-                outPut = outPut + vietHoa(100) + " ";
-            }
 
 
-//chuc
-            if ((a % 100) / 10 > 0) {
-                if ((a % 100) / 10 > 1) {
-                    outPut = outPut + vietHoa((a % 100) / 10) + " ";
-                }
 
-                outPut = outPut + vietHoa(10) + " ";
-            }
-            //don vi
-            if (a % 10 > 0) {
-                chuc = (a % 100) / 10;
-                donvi = a % 10;
-                if (chuc == 0 && donvi > 0) {
-                    outPut = outPut + " le " + vietHoa((a % 10)) + " ";
+   ![](icon.png)   [Xem đáp án tại đây](Q27.md)
 
-                } else if (chuc > 0 && donvi == 5) {
-                    outPut = outPut + " lam";
-                } else {
-                    outPut = outPut + vietHoa((a % 10)) + " ";
-                }
-            }
-        }
-        return outPut;
 
-    }
-```
 28. Tắt báo thức
 Tắt báo thức. Cho một dãy N đặt báo thức dạng HH:MM, từ 00:00 đến 23:59, đảm bảo tăng dần. Bạn chỉ thức dậy khi có ít nhất X báo thức bật lên liên tiếp trong vòng Y phút. Tính thời điểm thức dậy. Lưu ý từ 00:00 đến 01:00 là phút thứ 61.
 
@@ -462,43 +243,5 @@ Dòng thứ hai là một dãy báo thức dạng HH:MM, không trùng nhau.
 
 >Giải thích:Test case 1, chỉ cần 1 báo thức để thức dậy. Do đó bạn thức dậy ngay lần báo thức đầu tiên mà không quan tâm đến thời gian Y.
 	Test case 2, bạn cần 3 báo thức trong vòng 60 phút để thức dậy. Từ 03:00 đến 03:40 có 3 báo thức bật lên liên tiếp là 03:00 03:30 03:40 nên bạn thức dậy lúc 03:40. Lưu ý bạn không thể thức dậy lúc 2:00 vì từ 01:00 đến 02:00 là 61 phút.
-```java
-public static void main(String[] args) {
-        System.out.println(convertTo24HoursFormat("01:00"));
-        System.out.println(convertTo24HoursFormat("02:00"));
 
-
-        String[] a = {"01:00", "01:30", "02:00", "03:00", "03:30", "03:40"};
-        System.out.println(solveQ4(3, 60, 6, a));
-    }
-
-    public static int convertTo24HoursFormat(String twelveHourTime) {
-        List<String> a = Arrays.asList(twelveHourTime.split(":"));
-        int time = Integer.parseInt(a.get(0)) * 60 + Integer.parseInt(a.get(1));
-        return time;
-
-    }
-
-    public static String solveQ4(int X, int Y, int N, String[] alarmList) {
-        String output = "";
-
-        if (N < X) {
-            output = "cannot wake!";
-
-        } else if (X == 1) {
-            System.out.println(alarmList[0]);
-        } else {
-            for (int i = 0; i < alarmList.length - X; i++) {
-                if ((convertTo24HoursFormat(alarmList[i + X - 1]) - convertTo24HoursFormat(alarmList[i]) + 1) <= Y) {
-                    output = alarmList[i + X - 1];
-                    break;
-                } else {
-                    output = "cannot wake!";
-                    break;
-                }
-
-            }
-        }
-        return output;
-    }
-```
+   ![](icon.png)  [Xem đáp án tại đây](Q28.md)
