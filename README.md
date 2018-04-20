@@ -252,7 +252,9 @@ Xây dựng class PhanSo có các thuộc tính như sau:
 
 6. Tìm phân số lớn nhất giữa 3 phân số. Xuất ra phân số kết quả.
 ```
-16. Viết chương trinhg giải phương trình bậc 2: 
+16. Viết chương trinhg giải phương trình bậc 2, chương trình trả về phương trình có 1 nghiêmj, có 2 nghiệm, vô nghiệm và vô số nghiệm.
+Yêu cầu viết test case để kiểm tra chương trình chạy đúng hay không.
+Mô tả giải thuật của bạn.
 ```text
 
 Công thức nghiệm tổng quát của phương trình bậc hai
@@ -297,46 +299,44 @@ Giải thích:
 ```
 26. Cho một số tự nhiên N, sắp xếp lại các chữ số của nó sao cho được một số nhỏ nhất.
 
-27. ```text
-Cho một số nguyên N (-9999<=N<=9999) và hợp lệ (không có số 0 ở đầu). In ra cách đọc trong tiếng Việt, không dấu, của số đó. 
+27. Cho một số nguyên N (-9999<=N<=9999) và hợp lệ (không có số 0 ở đầu). In ra cách đọc trong tiếng Việt, không dấu, của số đó. 
 Quy ước cách đọc:
 
-Bộ chữ cái được dùng là: "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", chín", "mười", "mươi", "lăm", "trăm", "nghìn", "lẻ", "âm", "không".
-Với số hàng đơn vị:
-0 sẽ không đọc
-1 sẽ đọc là “một” nếu hàng chục là 0 hoặc 1, ngược lại thì đọc là “mốt”
-5 sẽ đọc là “năm” nếu hàng chục là 0, ngược lại thì đọc là “lăm"
-Các số còn lại đọc tương ứng như số lẻ bình thường (2 đọc là “hai”, 3 đọc là “ba", …)
-Với số hàng chục:
-0 sẽ đọc là “lẻ" nếu hàng đơn vị có giá trị khác 0. Ví dụ 102 đọc là “một trăm lẻ hai”. Ngược lại không cần đọc số 0.
-1 đọc là “mười”
-Các số còn lại đọc tương ứng như số lẻ bình thường kết hợp với chữ “mươi" thể hiện đây là vị trí hàng chục (2x đọc là “hai mươi x”, 3x đọc là “ba mươi x”, …)
-Với số hàng trăm:
-0 sẽ đọc là “không trăm" nếu hàng chục hoặc hàng đơn vị có giá trị khác 0. Ví dụ 5012 đọc là “năm nghìn không trăm mười hai". Ngược lại không cần đọc số 0.
-Các số còn lại đọc tương ứng như số lẻ bình thường kết hợp với chữ “trăm" thể hiện đây là vị trí hàng trăm (2xx đọc là “hai trăm xx”, 3xx đọc là “ba trăm xx", …)
-Với số hàng nghìn:
-Không cần xét số 0 ở đầu do yêu cầu của đề đơn giản hoá bài toán.
-Các số còn lại đọc tương ứng như số lẻ bình thường kết hợp với chữ “nghìn" thể hiện đây là vị trí hàng nghìn (2xxx đọc là “hai nghìn xxx, 3xxx đọc là “ba nghìn xxx”, …)
+>Bộ chữ cái được dùng là: "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", chín", "mười", "mươi", "lăm", "trăm", "nghìn", "lẻ", "âm", "không".
 
-Input:
+>Với số hàng đơn vị:
+>>0 sẽ không đọc
+>>1 sẽ đọc là “một” nếu hàng chục là 0 hoặc 1, ngược lại thì đọc là “mốt”
+>>5 sẽ đọc là “năm” nếu hàng chục là 0, ngược lại thì đọc là “lăm"
+>>Các số còn lại đọc tương ứng như số lẻ bình thường (2 đọc là “hai”, 3 đọc là “ba", …)
+
+>Với số hàng chục:
+>>0 sẽ đọc là “lẻ" nếu hàng đơn vị có giá trị khác 0. Ví dụ 102 đọc là “một trăm lẻ hai”. Ngược lại không cần đọc số 0.
+>>1 đọc là “mười”
+>>Các số còn lại đọc tương ứng như số lẻ bình thường kết hợp với chữ “mươi" thể hiện đây là vị trí hàng chục (2x đọc là “hai mươi x”, 3x đọc là “ba mươi x”, …)
+
+>Với số hàng trăm:
+>>0 sẽ đọc là “không trăm" nếu hàng chục hoặc hàng đơn vị có giá trị khác 0. Ví dụ 5012 đọc là “năm nghìn không trăm mười hai". Ngược lại không cần đọc số 0.
+>>Các số còn lại đọc tương ứng như số lẻ bình thường kết hợp với chữ “trăm" thể hiện đây là vị trí hàng trăm (2xx đọc là “hai trăm xx”, 3xx đọc là “ba trăm xx", …)
+
+>Với số hàng nghìn:
+>Không cần xét số 0 ở đầu do yêu cầu của đề đơn giản hoá bài toán.
+>>Các số còn lại đọc tương ứng như số lẻ bình thường kết hợp với chữ “nghìn" thể hiện đây là vị trí hàng nghìn (2xxx đọc là “hai nghìn xxx, 3xxx đọc là “ba nghìn xxx”, …)
+
++ Input:
 	Dòng đầu tiên gồm một số T, số test của bài.
 	T dòng tiếp theo, mỗi dòng là một test case bao gồm số N. giá trị tuyệt đối của N < 10000
-Output:
++ Output:
 	Gồm T dòng, mỗi dòng in ra một chuỗi cách đọc số, viết thường, không dấu. 
-Ví dụ:
-Input
++ Ví dụ:
 
-3
-15
-101
-2002
--1
-Output
-muoi lam
-mot tram le mot
-hai nghin khong tram le hai
-am mot
-```
+| Input         | Output                           |
+| ------------- |:--------------------------------:|
+| 15            |   muoi lam                       |
+| 101           |   mot tram le mot                |
+| 2002          |   hai nghin khong tram le hai    |
+| -1            |   am mot                         |
+
 
 ```java
 public static void main(String[] args) {
@@ -433,3 +433,26 @@ public static void main(String[] args) {
 
     }
 ```
+28. Tắt báo thức
+Tắt báo thức. Cho một dãy N đặt báo thức dạng HH:MM, từ 00:00 đến 23:59, đảm bảo tăng dần. Bạn chỉ thức dậy khi có ít nhất X báo thức bật lên liên tiếp trong vòng Y phút. Tính thời điểm thức dậy. Lưu ý từ 00:00 đến 01:00 là phút thứ 61.
+
++ Input:
+	Dòng đầu tiên gồm một số T, số test của bài.
+	T cặp dòng tiếp theo:
+Dòng thứ nhất là 3 số nguyên dương X, Y, N
+Dòng thứ hai là một dãy báo thức dạng HH:MM, không trùng nhau.
++ Output:
+	Gồm T dòng, mỗi dòng in thời điểm thức dậy dạng HH:MM. Nếu không thể thức dậy, in "cannot wake!"
+
+Ví dụ
+| Input                    | Output        |
+| ------------------------ |:-------------:|
+| 1 10 4                   |               |
+| 01:00 02:00 03:00 04:00  |   01:0        |
+| 3 60 6                   |               |
+|01:00 01:30 02:00 03:00 03:30 03:40|03:40 |
+|2 10 1                    |               |
+|01:00                     |cannot wake!   |
+
+>Giải thích:Test case 1, chỉ cần 1 báo thức để thức dậy. Do đó bạn thức dậy ngay lần báo thức đầu tiên mà không quan tâm đến thời gian Y.
+	Test case 2, bạn cần 3 báo thức trong vòng 60 phút để thức dậy. Từ 03:00 đến 03:40 có 3 báo thức bật lên liên tiếp là 03:00 03:30 03:40 nên bạn thức dậy lúc 03:40. Lưu ý bạn không thể thức dậy lúc 2:00 vì từ 01:00 đến 02:00 là 61 phút.
