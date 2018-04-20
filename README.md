@@ -154,6 +154,8 @@ public static void checkChuCai(char c){
 }
 ```
 9. Viết 1 hàm cộng 2 số ?, hàm này phải trả về 1 kiểu dữ liệu khác void.
+Phân tích: Người dùng có thể nhập vào là số, chuổi, hoặc vừa số vừa chuỗi?
+
 10. In ra màn hình số ngày trông một tháng nếu người dùng nhập vào một chuỗi gồm tháng và năm theo format: "MM/yyyy"
 11. Nhập vào một số dương N, In ra màn hình N+ 1 dòng với môi dòng bắt đầu từ 0.
     ví dụ, N= 5,  in ra màn hình sẽ là:
@@ -193,6 +195,7 @@ public static boolean isPalidrome(String input) {
 }
 ```
 13. Viết 1 hàm kiểm tra có phải năm nhuận hay không
+Phân tích: Năm nhuận là năm chia hết cho 4 và ko chia hết cho 100.
 14. Làm việc với Class
 ```text
 Xây dựng class SinhVien có các thuộc tính như sau:
@@ -277,6 +280,7 @@ ví dụ:
 18. Cho 2 số nguyên int a, b, viết chương trình đảo giá trị 2 số này mà ko được phép dùng biến thứ 3.
 
 19. Cho một mảng số nguyên, viết 1 chương trình xuất ra mảng con có tổng là lớn nhất.
+ví dụ: Mảng số nguyên a = {1,-2,1,3,-7,5} thí mảng con sẽ là {1,3} == tông lớn nhất là 4
 20. Loại bỏ khoảng trắng thừa trong 1 câu. Khoảng trắng thừ là khoảng trắng nằm ở đầu và cuối câu hoặc khoảng trắng nằm ngay sau môt khoảng trắng khác.
 21. Cho một mảng N phần tử, in ra cực trị địa phướng (local max, local )min của mảng
   + Local max là phần tử a[i] sao cho a[i] > a[i+1] && a[i] > a[i-1]
@@ -298,6 +302,7 @@ Giải thích:
 9 + 9 + 9 + 9 + 9 + 9 + 9 + 9 + 9 + 9 + 5 + 5 = 100 => 1 + 0 + 0 = 1
 ```
 26. Cho một số tự nhiên N, sắp xếp lại các chữ số của nó sao cho được một số nhỏ nhất.
+Phân tích: số tự nhiên là số luôn lớn hơn hoặc bằng 0, nên chỉ cần đưa số tự nhiên này vào một mảng, sắp xếp lại theo thư tự lớn dần rồi đưa ngược trở lại.
 
 27. Cho một số nguyên N (-9999<=N<=9999) và hợp lệ (không có số 0 ở đầu). In ra cách đọc trong tiếng Việt, không dấu, của số đó. 
 Quy ước cách đọc:
