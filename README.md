@@ -456,3 +456,43 @@ Ví dụ
 
 >Giải thích:Test case 1, chỉ cần 1 báo thức để thức dậy. Do đó bạn thức dậy ngay lần báo thức đầu tiên mà không quan tâm đến thời gian Y.
 	Test case 2, bạn cần 3 báo thức trong vòng 60 phút để thức dậy. Từ 03:00 đến 03:40 có 3 báo thức bật lên liên tiếp là 03:00 03:30 03:40 nên bạn thức dậy lúc 03:40. Lưu ý bạn không thể thức dậy lúc 2:00 vì từ 01:00 đến 02:00 là 61 phút.
+```java
+public static void main(String[] args) {
+        System.out.println(convertTo24HoursFormat("01:00"));
+        System.out.println(convertTo24HoursFormat("02:00"));
+
+
+        String[] a = {"01:00", "01:30", "02:00", "03:00", "03:30", "03:40"};
+        System.out.println(solveQ4(3, 60, 6, a));
+    }
+
+    public static int convertTo24HoursFormat(String twelveHourTime) {
+        List<String> a = Arrays.asList(twelveHourTime.split(":"));
+        int time = Integer.parseInt(a.get(0)) * 60 + Integer.parseInt(a.get(1));
+        return time;
+
+    }
+
+    public static String solveQ4(int X, int Y, int N, String[] alarmList) {
+        String output = "";
+
+        if (N < X) {
+            output = "cannot wake!";
+
+        } else if (X == 1) {
+            System.out.println(alarmList[0]);
+        } else {
+            for (int i = 0; i < alarmList.length - X; i++) {
+                if ((convertTo24HoursFormat(alarmList[i + X - 1]) - convertTo24HoursFormat(alarmList[i]) + 1) <= Y) {
+                    output = alarmList[i + X - 1];
+                    break;
+                } else {
+                    output = "cannot wake!";
+                    break;
+                }
+
+            }
+        }
+        return output;
+    }
+```
