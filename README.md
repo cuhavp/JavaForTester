@@ -135,6 +135,11 @@ AB = Math.Sqrt( (Xb-Xa)* (Xb-Xa) + (Yb-Ya)* (Yb-Ya) )
     6. Tìm phân số lớn nhất giữa 3 phân số. Xuất ra phân số kết quả.
 
 
+  ![](icon.png)  [Xem đáp án tại đây](Q16.md)
+
+
+  
+
 17. Viết chương trinhg giải phương trình bậc 2, chương trình trả về phương trình có 1 nghiêmj, có 2 nghiệm, vô nghiệm và vô số nghiệm.
 Yêu cầu viết test case để kiểm tra chương trình chạy đúng hay không.
 Mô tả giải thuật của bạn.
