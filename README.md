@@ -88,8 +88,13 @@ Mã sinh viên là một chuỗi random bắt đầu bằng "JAK-",
 DTB = (toan*3 + ly*2 + hoa)/6
 
 5. Tìm sinh viên có điểm trung bình lớn nhất giữa 3 sinh viên cho trước. Xuất thông tin sinh viên đó.
-```     
-14. Làm việc với Class
+```   
+
+  ![](icon.png)  [Xem đáp án tại đây](Q14.md)
+
+  
+    
+15. Làm việc với Class
 ```text
 Xây dựng class Diem có các thuộc tính như sau:
 + X : Kiểu số nguyên
@@ -107,7 +112,11 @@ AB = Math.Sqrt( (Xb-Xa)* (Xb-Xa) + (Yb-Ya)* (Yb-Ya) )
 
 5. Cho 3 điểm A,B,C tìm độ dài lớn nhất của 3 cạnh AB, AC, BC. Xây dựng hàm tính chu vi tam giác được tạo thành từ 3 điểm trên. Chu vi tam giác bằng tổng 3 cạnh cộng lại.
 ```
-15. Làm việc với class
+
+   ![](icon.png)   [Xem đáp án tại đây](Q15.md)
+
+
+16. Làm việc với class
 
     Xây dựng class PhanSo có các thuộc tính như sau:
     + Tu : Số nguyên
@@ -126,7 +135,7 @@ AB = Math.Sqrt( (Xb-Xa)* (Xb-Xa) + (Yb-Ya)* (Yb-Ya) )
     6. Tìm phân số lớn nhất giữa 3 phân số. Xuất ra phân số kết quả.
 
 
-16. Viết chương trinhg giải phương trình bậc 2, chương trình trả về phương trình có 1 nghiêmj, có 2 nghiệm, vô nghiệm và vô số nghiệm.
+17. Viết chương trinhg giải phương trình bậc 2, chương trình trả về phương trình có 1 nghiêmj, có 2 nghiệm, vô nghiệm và vô số nghiệm.
 Yêu cầu viết test case để kiểm tra chương trình chạy đúng hay không.
 Mô tả giải thuật của bạn.
 
@@ -141,15 +150,15 @@ với x là ẩn số chưa biết và a, b, c là các số đã biết sao cho
 
 ![Nghiệm của phương ](https://upload.wikimedia.org/wikipedia/commons/c/c4/Quadratic_formula.svg)
 
-17. Cho môt mảng số nguyên int[] A, Viết một chương trình xuất ra mảng B = A + 1
+18. Cho môt mảng số nguyên int[] A, Viết một chương trình xuất ra mảng B = A + 1
 
 ví dụ:
  A = {1,3,2,4}  ==> B = {1,3,2,5}
  A = {9,9,9}    ==> B = {1,0,0,0}
 
-18. Cho 2 số nguyên int a, b, viết chương trình đảo giá trị 2 số này mà ko được phép dùng biến thứ 3.
+19. Cho 2 số nguyên int a, b, viết chương trình đảo giá trị 2 số này mà ko được phép dùng biến thứ 3.
 
-19. Cho một mảng số nguyên, viết 1 chương trình xuất ra mảng con có tổng là lớn nhất.
+20. Cho một mảng số nguyên, viết 1 chương trình xuất ra mảng con có tổng là lớn nhất.
 ví dụ: Mảng số nguyên a = {1,-2,1,3,-7,5} thí mảng con sẽ là {1,3} == tông lớn nhất là 4
 20. Loại bỏ khoảng trắng thừa trong 1 câu. Khoảng trắng thừ là khoảng trắng nằm ở đầu và cuối câu hoặc khoảng trắng nằm ngay sau môt khoảng trắng khác.
 21. Cho một mảng N phần tử, in ra cực trị địa phướng (local max, local )min của mảng
