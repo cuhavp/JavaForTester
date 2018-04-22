@@ -259,3 +259,9 @@ Dòng thứ hai là một dãy báo thức dạng HH:MM, không trùng nhau.
 	Test case 2, bạn cần 3 báo thức trong vòng 60 phút để thức dậy. Từ 03:00 đến 03:40 có 3 báo thức bật lên liên tiếp là 03:00 03:30 03:40 nên bạn thức dậy lúc 03:40. Lưu ý bạn không thể thức dậy lúc 2:00 vì từ 01:00 đến 02:00 là 61 phút.
 
    ![](icon.png)  [Xem đáp án tại đây](Q28.md)
+
+29. Viết một chương trình theo UML như bên dưới:
+
+    ![](Q29-uml.png)   
+
+    
