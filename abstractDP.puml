@@ -1,0 +1,63 @@
+@startuml
+
+AbstractFactoryDemo - AnimalFactory  : create >
+
+AnimalFactory <|-- SeaAnimalFactory : getAnimalFactory() >
+AnimalFactory <|-- LandAnimalFactory : getAnimalFactory() >
+
+SeaAnimalFactory ... SeaAnimalFarmily : getName() >
+LandAnimalFactory ... LandAnimalFarmily : getName() >
+
+LandAnimalFarmily .... Cat: getAnimal() >
+LandAnimalFarmily .... Dog: getAnimal() >
+LandAnimalFarmily .... Lion: getAnimal() >
+SeaAnimalFarmily .... Shark : getAnimal() >
+SeaAnimalFarmily .... Octpous : getAnimal() >
+
+
+
+class AbstractFactoryDemo{
+        + public static void main(String[] args)
+    }
+
+abstract class AnimalFactory {
+    + abstract getAnimal() : Animal
+    + {static} getAnimalFactory() : AnimalFactory
+}
+
+interface Animal {
+    speak() : String
+}
+
+class  LandAnimalFactory{
+    + getAnimal() : Animal
+}
+class  SeaAnimalFactory{
+    + getAnimal() : Animal
+}
+
+class  Cat {
+    + speak() : String
+}
+
+class  Dog {
+    + speak() : String
+}
+
+class  Lion {
+    + speak() : String
+}
+
+class Shark {
+    + speak() : String
+}
+class Octpous {
+    + speak() : String
+}
+
+Dog --|> Animal
+Lion --|> Animal
+Cat --|> Animal
+Shark --|> Animal
+Octpous --|> Animal
+@enduml
